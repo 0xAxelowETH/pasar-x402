@@ -1,0 +1,12 @@
+{
+  "$comment": "Each route puts an x402 paywall in front of an upstream API. path must end with /* ; the rest of the URL is appended to upstream.",
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/bsc/*",
+      "upstream": "http://127.0.0.1:4021/api/public",
+      "price": "$0.01",
+      "description": "BNB Smart Chain gas price and BNB/USD price (resold free upstream example)"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "name": "pasar-x402",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Pasar x402: pay-per-request services for AI agents on BNB Chain",
+  "type": "module",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "@x402/core": "^2.28.0",
+    "@x402/evm": "^2.28.0",
+    "@x402/express": "^2.28.0",
+    "@x402/fetch": "^2.28.0",
+    "@x402/mcp": "^2.28.0",
+    "dotenv": "^18.0.8",
+    "express": "^5.3.0",
+    "grammy": "^1.46.0",
+    "viem": "^2.57.7",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@fontsource/archivo-black": "^5.3.0",
+    "@fontsource/atkinson-hyperlegible": "^5.3.0",
+    "@fontsource/martian-mono": "^5.3.0",
+    "@fontsource/permanent-marker": "^5.3.0",
+    "@nomicfoundation/hardhat-toolbox-viem": "^5.0.7",
+    "@openzeppelin/contracts": "^5.6.1",
+    "@resvg/resvg-js": "^2.6.2",
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.5",
+    "hardhat": "^3.20.0",
+    "opentype.js": "^2.0.0",
+    "tsx": "^4.23.15",
+    "typescript": "~6.0.3"
+  },
+  "scripts": {
+    "build": "hardhat build && tsx scripts/export-artifacts.ts",
+    "test": "hardhat test nodejs",
+    "typecheck": "tsc --noEmit",
+    "chain": "hardhat node",
+    "setup": "tsx scripts/setup.ts",
+    "deploy": "tsx scripts/deploy.ts",
+    "dev": "tsx scripts/dev.ts",
+    "demo": "tsx scripts/demo.ts",
+    "facilitator": "tsx src/facilitator/server.ts",
+    "server": "tsx src/stalls/server.ts",
+    "gateway": "tsx src/gateway/server.ts",
+    "agent": "tsx src/agent/cli.ts",
+    "bot": "tsx src/agent/telegram.ts",
+    "mcp:bridge": "tsx src/agent/mcp-bridge.ts",
+    "brand": "tsx scripts/build-brand.ts"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
